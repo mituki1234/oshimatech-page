@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    /* シンプルな配色に変更 */
+    --primary: #FFCE00;     /* メインの黄色 */
+    --secondary: #FF8A00;   /* オレンジ */
+    --accent: #FF3864;      /* 赤ピンク */
+    --background: #FFFFFF;  /* 背景を白に変更 */
+    --text-dark: #333333;   /* ダークテキスト */
+    --text-light: #F7FFF7;  /* ライトテキスト */
+    --pixel-size: 3px;      /* ピクセルサイズを若干小さく */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    line-height: 1.6;
+    image-rendering: pixelated;
+}
+
+.container {
+  position: relative;
+  background: var(--background);
+}
+
+/* ドット風の境界線を作成する */
+.pixel-border {
+    position: relative;
+}
+
+.pixel-border::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    clip-path: polygon(
+        0 3px, 3px 3px, 3px 0,
+        calc(100% - 3px) 0, calc(100% - 3px) 3px, 100% 3px,
+        100% calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%,
+        3px 100%, 3px calc(100% - 3px), 0 calc(100% - 3px)
+    );
+    z-index: -1;
+}

@@ -1,0 +1,50 @@
+
+.about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.about-title h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    background-color: var(--primary);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+.about-title h2::before, .about-title h2::after {
+    position: absolute;
+    color: var(--accent);
+    top: 0;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 800px;
+    font-size: 0.9em;
+    color: var(--text-dark);
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.6;
+    border:#FFCE00 solid 3px;
+    background-color: white;
+}
+.about-text h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+.about-text p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}

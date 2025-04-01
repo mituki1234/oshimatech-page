@@ -1,0 +1,57 @@
+
+/* ヘッダー */
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    border-bottom: var(--pixel-size) solid var(--secondary);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    margin-left: 30px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.logo h1 {
+    color: var(--text-dark);
+    letter-spacing: 1px;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 0 10px;
+    position: relative;
+    background-color: white;
+    color: var(--text-dark);
+    border: var(--pixel-size) solid var(--secondary);
+    box-shadow: var(--pixel-size) var(--pixel-size) 0 rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.nav a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 rgba(0,0,0,0.2);
+    background-color: var(--secondary);
+    color: white;
+}
+
+.nav span {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}

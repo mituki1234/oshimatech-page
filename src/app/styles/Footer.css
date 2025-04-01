@@ -1,0 +1,26 @@
+/* フッター */
+footer {
+    background-color: var(--text-dark);
+    border-top: var(--pixel-size) solid var(--primary);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
