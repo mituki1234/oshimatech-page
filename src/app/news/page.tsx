@@ -6,7 +6,6 @@ import { database } from "@/firebase";
 import Headers from "@/app/components/Header";
 import Newslist from "@/app/components/Newslist";
 import Footer from "@/app/components/Footer";
-import "./news.css"
 import { ref, get } from "firebase/database";
 
 export default function Home() {

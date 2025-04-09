@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header className="header">
         <div className="logo">
-          <h1>logo</h1>
+          <h1>shimaTech</h1>
         </div>
         <div className="nav">
         <a href="/news">

@@ -1,53 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    /* シンプルな配色に変更 */
-    --primary: #FFCE00;     /* メインの黄色 */
-    --secondary: #FF8A00;   /* オレンジ */
-    --accent: #FF3864;      /* 赤ピンク */
-    --background: #FFFFFF;  /* 背景を白に変更 */
-    --text-dark: #333333;   /* ダークテキスト */
-    --text-light: #F7FFF7;  /* ライトテキスト */
-    --pixel-size: 3px;      /* ピクセルサイズを若干小さく */
+  /* モダンWebアプリスタイル - 紫ベース */
+  --purple-primary: ;
+  --purple-light: #bb86fc;
+  --purple-dark: #3700b3;
+  --surface: #ffffff;
+  --background: #f5f5fa;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4f4f6f;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--text-dark);
-    font-family: 'Press Start 2P', cursive, sans-serif;
-    line-height: 1.6;
-    image-rendering: pixelated;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  letter-spacing: 0.2px;
 }
 
 .container {
   position: relative;
   background: var(--background);
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* ドット風の境界線を作成する */
-.pixel-border {
-    position: relative;
+a {
+  color: var(--purple-primary);
+  text-decoration: none;
+  transition: var(--transition);
 }
 
-.pixel-border::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    clip-path: polygon(
-        0 3px, 3px 3px, 3px 0,
-        calc(100% - 3px) 0, calc(100% - 3px) 3px, 100% 3px,
-        100% calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%,
-        3px 100%, 3px calc(100% - 3px), 0 calc(100% - 3px)
-    );
-    z-index: -1;
+a:hover {
+  color: var(--purple-dark);
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

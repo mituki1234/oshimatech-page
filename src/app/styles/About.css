@@ -1,50 +1,94 @@
-
-.about {
+/* Aboutセクション - モダンWebアプリスタイル（紫ベース） */
+:root {
+    --purple-primary: #6200ee;
+    --purple-light: #bb86fc;
+    --purple-dark: #3700b3;
+    --surface: #ffffff;
+    --background: #f5f5fa;
+    --text-primary: #1a1a2e;
+    --text-secondary: #4f4f6f;
+  }
+  
+  .about {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    padding: 80px 24px;
+    background-color: var(--background);
     position: relative;
-}
-
-.about-title h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 20px 0;
-    color: var(--text-dark);
-    text-transform: uppercase;
+  }
+  
+  .about-title {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  
+  .about-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple-primary);
     position: relative;
     display: inline-block;
-    padding: 0 30px;
-    background-color: var(--primary);
-    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
-}
-
-.about-title h2::before, .about-title h2::after {
+    margin: 0;
+    padding-bottom: 12px;
+  }
+  
+  .about-title h2::after {
+    content: "";
     position: absolute;
-    color: var(--accent);
-    top: 0;
-}
-
-.about-text {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--purple-light);
+    border-radius: 2px;
+  }
+  
+  .about-text {
     width: 100%;
     max-width: 800px;
-    font-size: 0.9em;
-    color: var(--text-dark);
-    text-align: center;
-    margin: 20px 0;
+    color: var(--text-primary);
+    background-color: var(--surface);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    margin: 0 auto;
     line-height: 1.6;
-    border:#FFCE00 solid 3px;
-    background-color: white;
-}
-.about-text h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-}
-.about-text p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
+  }
+  
+  .about-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: var(--purple-dark);
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      padding: 60px 20px;
+    }
+  
+    .about-title h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-text {
+      padding: 24px;
+    }
+  
+    .about-text h2 {
+      font-size: 1.3rem;
+    }
+  
+    .about-text p {
+      font-size: 0.95rem;
+    }
+  }
