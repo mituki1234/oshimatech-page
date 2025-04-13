@@ -23,7 +23,7 @@ export default function NewsList() {
         async function fetchNews() {
             try {
                 // "news" コレクションからすべてのドキュメントを取得
-                const querySnapshot = await getDocs(query(collection(db, "news"), limit(3)));
+                const querySnapshot = await getDocs(collection(db, "news"));
 
                 // ニュースリストに整形
                 const newsList = querySnapshot.docs.map(doc => ({
@@ -51,7 +51,6 @@ export default function NewsList() {
                     <News title={newsItem.title} date={newsItem.date} link={newsItem.link} key={newsItem.id} />
                 ))}
             </div>
-            <a href="/news" className="news-more"><span>lead more</span></a>
         </div>
     )
 }

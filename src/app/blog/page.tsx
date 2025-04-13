@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "@/app/page.module.css";
-import { database } from "@/firebase";
+import { db } from "@/firebase";
 import Headers from "@/app/components/Header";
-import Newslist from "@/app/components/Newslist";
+import Newslist from "@/app/components/NewsList2";
 import Footer from "@/app/components/Footer";
 import { ref, get } from "firebase/database";
 

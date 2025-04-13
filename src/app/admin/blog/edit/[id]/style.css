@@ -1,0 +1,208 @@
+/* 記事編集フォームのスタイル */
+
+.edit-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .edit-card {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: 32px;
+    margin: 32px 0;
+  }
+  
+  .edit-card h1 {
+    font-size: 1.8rem;
+    color: var(--purple-primary);
+    margin-bottom: 24px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 14px;
+  }
+  
+  .edit-card h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--purple-primary), var(--purple-light));
+    border-radius: 2px;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    background-color: #f9f9fd;
+    color: var(--text-primary);
+    transition: var(--transition);
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--purple-light);
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.2);
+  }
+  
+  .form-control.textarea {
+    min-height: 250px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+  }
+  
+  .meta-info {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .meta-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .meta-info svg {
+    width: 16px;
+    height: 16px;
+    color: var(--purple-light);
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  .save-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple-primary);
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    border: none;
+    transition: var(--transition);
+    cursor: pointer;
+    gap: 8px;
+  }
+  
+  .save-button:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .save-button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .cancel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  
+  .cancel-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .preview-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .preview-section h2 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  .preview-content {
+    background-color: #f9f9fd;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .preview-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  
+  .preview-content .date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  
+  .preview-content .content {
+    line-height: 1.6;
+  }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(98, 0, 238, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--purple-primary);
+    animation: spin 1s ease-in-out infinite;
+    margin: 40px auto;
+  }
+  
+  @keyframes spin {
+    to { 
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .edit-card {
+      padding: 24px;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+    
+    .save-button, .cancel-button {
+      width: 100%;
+    }
+  }

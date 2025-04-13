@@ -1,14 +1,15 @@
+import Link from "next/link";
 import "@/app/styles/Header.css";
 
 export default function Header() {
     return (
         <header className="header">
-        <div className="logo">
+        <Link href="/">
           <h1>shimaTech</h1>
-        </div>
+        </Link>
         <div className="nav">
-        <a href="/news">
-            <span>news</span>
+        <a href="/blog">
+            <span>blog</span>
           </a>
           <a href="/#about">
             <span>about</span>

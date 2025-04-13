@@ -1,0 +1,297 @@
+/* note.comインスパイアの紫色アクセントのシンプルなブログスタイル */
+
+.container-md {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 40px 40px;
+  margin-bottom: 0;
+  transition: none;
+}
+
+/* ブログタイトル */
+.card h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  line-height: 1.4;
+  position: relative;
+  padding-bottom: 0;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+.card h1::after {
+  display: none;
+}
+
+/* 日付表示 */
+.text-secondary {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 32px;
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.text-secondary::before {
+  display: none;
+}
+
+/* 基本テキストスタイル */
+.card p {
+  margin-bottom: 7px;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin: 48px 0 24px;
+  padding-bottom: 0;
+  position: relative;
+  padding-left: 0;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.card h2::before {
+  display: none;
+}
+
+.card b {
+  color: var(--purple-primary);
+  font-weight: 700;
+}
+
+.date {
+  font-size: 0.8rem;
+  text-align: center !important;
+  margin-bottom: 8px !important;
+  color: var(--text-secondary) !important;
+}
+
+/* 先頭段落のスタイル */
+.card p:first-of-type {
+  font-size: 1.05rem;
+}
+
+/* 特殊スタイル - クラスが付いている場合のみ適用 */
+
+/* 箇条書きスタイル */
+.card p.bullet-item {
+  position: relative;
+  padding-left: 22px;
+}
+
+.card p.bullet-item::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  color: var(--purple-primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 番号付きリストスタイル */
+.card p.number-item {
+  position: relative;
+  padding-left: 26px;
+}
+
+.card p.number-item.n1::before {
+  content: '1';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--purple-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.card p.number-item.n2::before {
+  content: '2';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--purple-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.card p.number-item.n3::before {
+  content: '3';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--purple-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* 注意点スタイル */
+.card p.note-item {
+  position: relative;
+  padding-left: 26px;
+}
+
+.card p.note-item::before {
+  content: '※';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--purple-primary);
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+/* ハイライトスタイル */
+.card p.highlight {
+  font-weight: 500;
+  padding: 16px 20px;
+  border-left: 3px solid var(--purple-primary);
+  margin: 30px 0;
+}
+
+/* 区切り線付きスタイル */
+.card p.divider {
+  border-bottom: 1px solid rgba(98, 0, 238, 0.1);
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+}
+
+/* 戻るボタン */
+.button-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid var(--purple-primary);
+  color: var(--purple-primary);
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.button-outline::before {
+  content: '←';
+  margin-right: 8px;
+  font-size: 1em;
+}
+
+.button-outline:hover {
+  background-color: rgba(98, 0, 238, 0.04);
+  color: var(--purple-primary);
+  transform: none;
+  box-shadow: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: var(--purple-primary);
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition);
+  border: none;
+  box-shadow: none;
+  font-size: 0.9rem;
+}
+
+.button:hover {
+  background-color: var(--purple-dark);
+  transform: none;
+  box-shadow: none;
+}
+
+/* ユーティリティクラス */
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.3rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.0rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-5 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .card {
+    padding: 32px 0;
+  }
+
+  .card h1 {
+    font-size: 1.6rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .card h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 0;
+  }
+
+  .card h1 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 36px 0 18px;
+  }
+
+  .button-outline,
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
