@@ -1,94 +1,108 @@
-/* Aboutセクション - モダンWebアプリスタイル（紫ベース） */
-:root {
-    --purple-primary: #6200ee;
-    --purple-light: #bb86fc;
-    --purple-dark: #3700b3;
-    --surface: #ffffff;
-    --background: #f5f5fa;
-    --text-primary: #1a1a2e;
-    --text-secondary: #4f4f6f;
+/* Aboutセクション - 無印良品風シンプルスタイル */
+  
+.about {
+  background-color: var(--surface);
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 0 50px 0;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-header h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-text {
+  width: 100%;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.about-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.feature {
+  padding: 1.8rem;
+  background-color: var(--background);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.feature:hover {
+  border-color: var(--accent-color);
+}
+
+.feature h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.feature p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ニュースの「もっと見る」ボタンを中央揃え */
+.news-more {
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+  width: 150px;
+}
+  
+@media (max-width: 768px) {
+  .about-header h2 {
+  font-size: 1.6rem;
   }
-  
-  .about {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 80px 24px;
-    background-color: var(--background);
-    position: relative;
+
+  .about-text h3 {
+  font-size: 1.3rem;
   }
-  
-  .about-title {
-    text-align: center;
-    margin-bottom: 48px;
+
+  .about-features {
+  grid-template-columns: 1fr;
+  gap: 1rem;
   }
-  
-  .about-title h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--purple-primary);
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding-bottom: 12px;
+
+  .feature {
+  padding: 1.5rem;
   }
-  
-  .about-title h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--purple-light);
-    border-radius: 2px;
-  }
-  
-  .about-text {
-    width: 100%;
-    max-width: 800px;
-    color: var(--text-primary);
-    background-color: var(--surface);
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  .about-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 24px;
-    color: var(--purple-dark);
-  }
-  
-  .about-text p {
-    font-size: 1rem;
-    margin-bottom: 16px;
-    color: var(--text-secondary);
-  }
-  
-  @media (max-width: 768px) {
-    .about {
-      padding: 60px 20px;
-    }
-  
-    .about-title h2 {
-      font-size: 1.8rem;
-    }
-  
-    .about-text {
-      padding: 24px;
-    }
-  
-    .about-text h2 {
-      font-size: 1.3rem;
-    }
-  
-    .about-text p {
-      font-size: 0.95rem;
-    }
-  }
+}

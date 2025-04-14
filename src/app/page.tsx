@@ -9,9 +9,9 @@ import "./main.css"
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <Header />
-      <main className={styles.main}>
+      <main className="main-content">
         <Hero />
         <NewsList />
         <About />

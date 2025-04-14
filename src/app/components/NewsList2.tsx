@@ -3,9 +3,8 @@ import React from "react";
 import { useState } from "react";
 import "@/app/styles/News.css";
 import { db } from "@/firebase";
-import { doc, getDoc, getDocs, collection, limit, query} from "firebase/firestore";
+import { doc, getDoc, getDocs, collection, limit, query, orderBy} from "firebase/firestore";
 import News from "@/app/components/News";
-import { link } from "fs";
 
 
 type News = {
@@ -42,15 +41,27 @@ export default function NewsList() {
     }, []);
     console.log("news", news);
     return (
-        <div className="news">
-            <div className="news-title">
-                <h2>news</h2>
+        <section className="news section">
+            <div className="container">
+                <div className="news-header">
+                    <h2>お知らせ</h2>
+                    <div className="divider"></div>
+                </div>
+                <div className="news-list">
+                    {news.length > 0 ? (
+                        news.map((newsItem) => (
+                            <News title={newsItem.title} date={newsItem.date} link={newsItem.link} key={newsItem.id} />
+                        ))
+                    ) : (
+                        <div className="news-empty">
+                            <p>現在お知らせはありません</p>
+                        </div>
+                    )}
+                </div>
+                <div className="news-action">
+                    <a href="/blog" className="btn-secondary">すべて見る</a>
+                </div>
             </div>
-            <div className="news-list">
-                {news.map((newsItem) => (
-                    <News title={newsItem.title} date={newsItem.date} link={newsItem.link} key={newsItem.id} />
-                ))}
-            </div>
-        </div>
+        </section>
     )
 }

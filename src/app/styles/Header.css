@@ -1,90 +1,96 @@
-/* ヘッダー - モダンWebアプリスタイル（紫ベース） */
-:root {
-    --purple-primary: #6200ee;
-    --purple-light: #bb86fc;
-    --purple-dark: #3700b3;
-    --surface: #ffffff;
-    --background: #f5f5fa;
-    --text-primary: #1a1a2e;
-    --text-secondary: #4f4f6f;
-}
-
+/* ヘッダー - 無印良品風シンプルスタイル */
 .header {
-    width: 100%;
-    height: 90px;
+    width: 100vw;
+    max-width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 0 24px;
+    justify-content: space-between;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 var(--container-padding);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
-}
-
-.logo h1 {
-    color: var(--purple-primary);
-    font-size: 2.2dem;
+.header h1 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-left: 20px;
+    letter-spacing: 0.02em;
+    margin: 0;
 }
 
 .nav {
-    margin-left: auto;
     display: flex;
-    gap: 8px;
+    gap: 32px;
 }
 
 .nav a {
     text-decoration: none;
-    padding: 8px 16px;
     position: relative;
-    background-color: transparent;
     color: var(--text-secondary);
-    border: none;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    font-weight: 500;
+    transition: var(--transition);
+    font-weight: 400;
+    border-bottom: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
 }
 
 .nav a:hover {
-    background-color: rgba(98, 0, 238, 0.08);
-    color: var(--purple-primary);
+    color: var(--accent-color);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.2s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
 }
 
 .nav a.active {
-    color: var(--purple-primary);
-    background-color: rgba(98, 0, 238, 0.08);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.nav a.active::after {
+    width: 100%;
+    background-color: var(--text-primary);
 }
 
 .nav span {
-    font-size: 1.1em;
-    letter-spacing: 0.2px;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {
     .header {
         height: 60px;
-        padding: 0 16px;
+        padding: 0 5%;
     }
 
-    .logo h1 {
+    .header h1 {
         font-size: 1.2rem;
     }
 
+    .nav {
+        gap: 20px;
+    }
+
     .nav a {
-        padding: 6px 10px;
+        font-size: 0.85rem;
     }
 
     .nav span {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }

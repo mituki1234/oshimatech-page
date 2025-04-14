@@ -1,77 +1,121 @@
-/* フッター - モダンWebアプリスタイル（紫ベース） */
-:root {
-    --purple-primary: #6200ee;
-    --purple-light: #bb86fc;
-    --purple-dark: #3700b3;
-    --surface: #ffffff;
-    --background: #f5f5fa;
-    --text-primary: #1a1a2e;
-    --text-secondary: #4f4f6f;
-}
+/* フッター - 無印良品風シンプルスタイル */
 
-footer {
+.footer {
+    background-color: var(--surface);
+    width: 100vw;
+    max-width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding: 60px var(--container-padding) 30px;
+    color: var(--text-primary);
+  }
+  
+  .footer-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    gap: 32px;
-    background: var(--purple-primary);
-    color: white;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0 24px;
-    position: relative;
-    z-index: 10;
-}
-
-footer a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    font-size: 0.9rem;
-    /* 文字サイズを大きく変更 (0.9rem → 1.1rem) */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .footer-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.4rem;
     font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-footer a:hover {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
-footer a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: var(--purple-light);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-footer a:hover::after {
-    width: 80%;
-}
-
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        height: auto;
-        padding: 16px;
-        gap: 12px;
+    margin: 0 0 15px;
+    letter-spacing: 0.02em;
+  }
+  
+  .accent-text {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .footer-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 300px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .footer-links-column h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0 20px;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+  }
+  
+  .footer-links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links-column li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-links-column a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+    letter-spacing: 0.02em;
+  }
+  
+  .footer-links-column a:hover {
+    color: var(--text-active);
+  }
+  
+  .footer-bottom {
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px var(--container-padding-mobile) 20px;
     }
-
-    footer a {
-        font-size: 1.5rem;
-        /* モバイル表示時の文字サイズも大きく変更 (0.8rem → 1rem) */
-        padding: 6px 10px;
+  
+    .footer-content {
+      flex-direction: column;
+      gap: 30px;
     }
-}
+  
+    .footer-links {
+      width: 100%;
+      gap: 40px;
+    }
+  
+    .footer-info {
+      min-width: unset;
+    }
+  
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
